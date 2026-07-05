@@ -126,7 +126,7 @@ def rankpage():
         print(f'rankpage-保存输出文件-{index}/{len(video_lists)}')
         save_output_file(f'rank_{index}.json',json.dumps(
             {
-                "Title": f"Bilibili 全站排行榜 | 第 {index} / {len(video_lists)}"
+                "Title": f"Bilibili 全站排行榜 | 第 {index} / {len(video_lists)} 页"
             }
         ,ensure_ascii=False))
         save_output_file(f'rank_{index}.xaml',o)

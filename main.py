@@ -200,7 +200,14 @@ def ranklistpage():
         }
     ,ensure_ascii=False))
     save_output_file(f'rank_list.xaml',output)
-    
+
+def sfile():
+    print('sfile-保存build_info.md')
+    load_template('build_info.md')
+    save_output_file(f'build_info.md',replaces(templates['build_info.md'],{
+        'build_version':BUILD_VERSION
+    }))
+
 def init():
     print('init-初始化中')
     global OUTPUT_PATH, BASE_PATH, BUILD_VERSION, templates
@@ -221,7 +228,11 @@ def init():
             continue
         print(f'init-运行rank-{listtype._name_}分榜')
         rankpage(listtype) # type: ignore
+
     print('init-运行ranklist')
     ranklistpage()
+
+    print('init-运行sfile')
+    sfile()
 
 init()

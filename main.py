@@ -38,7 +38,7 @@ def load_template(name, noxaml = False):
     print(f'load_template-加载模板文件-{name}')
     global templates
     if not name in templates:
-        t_path = os.path.join(BASE_PATH, 'templates', name+'' if noxaml else '.xaml')
+        t_path = os.path.join(BASE_PATH, 'templates', name+('' if noxaml else '.xaml'))
         with open(t_path,'r', encoding='utf-8') as f:
             templates[name] =  f.read()
 
@@ -204,7 +204,7 @@ def ranklistpage():
 
 def sfile():
     print('sfile-保存build_info.md')
-    load_template('build_info.md')
+    load_template('build_info.md',noxaml=True)
     save_output_file(f'build_info.md',replaces(templates['build_info.md'],{
         'build_version':BUILD_VERSION
     }))

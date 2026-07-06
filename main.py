@@ -152,7 +152,8 @@ def rankpage(type_: RankType_NameEx | None = None):
                 }) for index, v in enumerate(vl,start=1+(vlindex-1)*20)
             ]),
             'next': '' if vlindex == len(video_lists) else replaces(templates['rankpage-next'],{
-                'num':vlindex+1
+                'num':vlindex+1,
+                'ltype':'overall' if type_ == None else type_._name_
             }),
         })
 

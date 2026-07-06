@@ -175,13 +175,15 @@ def rankpage(type_: RankType_NameEx | None = None):
             ,ensure_ascii=False))
             save_output_file(f'{type_._name_}_rank_{index}.xaml',o)
 
-def ranklistpage(ranks):
+def ranklistpage():
     print('ranklistpage-开始')
     print('ranklistpage-加载模板')
     load_template('ranklistpage')
     load_template('ranklistpage-item')
     output = ''
     for listtype in list(RankType_NameEx._member_map_.values()):
+        if listtype._name_ in ['All']:
+            continue
         print(f'ranklistpage-添加排行榜-{listtype._name_}')
         output += replaces(templates['ranklistpage-item'],{
             'name':listtype.value['name'],
@@ -210,12 +212,15 @@ def init():
 
     print('init-运行mainpage')
     mainpage()
+    
     print('init-运行rank')
     rankpage()
     for listtype in list(RankType_NameEx._member_map_.values()):
+        if listtype._name_ in ['All']:
+            continue
         print(f'init-运行rank-{listtype._name_}分榜')
         rankpage(listtype) # type: ignore
     print('init-运行ranklist')
-    ranklistpage(list(RankType_NameEx._member_map_.values()))
+    ranklistpage()
 
 init()

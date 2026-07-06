@@ -34,11 +34,11 @@ class RankType_NameEx(Enum):
     Original = {"api_type": "x", "rid": 0, "type": "origin", "name": "原创"}
     Rookie = {"api_type": "x", "rid": 0, "type": "rookie", "name": "新人"}
 
-def load_template(name):
+def load_template(name, noxaml = False):
     print(f'load_template-加载模板文件-{name}')
     global templates
     if not name in templates:
-        t_path = os.path.join(BASE_PATH, 'templates', name+'.xaml')
+        t_path = os.path.join(BASE_PATH, 'templates', name+'' if noxaml else '.xaml')
         with open(t_path,'r', encoding='utf-8') as f:
             templates[name] =  f.read()
 

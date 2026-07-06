@@ -5,6 +5,34 @@ import shutil
 import json
 import time
 import secrets
+from enum import Enum
+
+class RankType_NameEx(Enum):
+    All = {"api_type": "x", "rid": 0, "type": "all", "name": "全部"}
+    Bangumi = {"api_type": "pgc", "season_type": 1, "name": "番剧"}
+    GuochuangAnime = {"api_type": "pgc", "season_type": 4, "name": "国产动画"}
+    Guochuang = {"api_type": "x", "rid": 168, "type": "all", "name": "国创相关"}
+    Documentary = {"api_type": "pgc", "season_type": 3, "name": "纪录片"}
+    Douga = {"api_type": "x", "rid": 1005, "type": "all", "name": "动画"}
+    Music = {"api_type": "x", "rid": 1003, "type": "all", "name": "音乐"}
+    Dance = {"api_type": "x", "rid": 1004, "type": "all", "name": "舞蹈"}
+    Game = {"api_type": "x", "rid": 1008, "type": "all", "name": "游戏"}
+    Knowledge = {"api_type": "x", "rid": 1010, "type": "all", "name": "知识"}
+    Technology = {"api_type": "x", "rid": 1012, "type": "all", "name": "科技数码"}
+    Sports = {"api_type": "x", "rid": 1018, "type": "all", "name": "运动"}
+    Car = {"api_type": "x", "rid": 1013, "type": "all", "name": "汽车"}
+    Life = {"api_type": "x", "rid": 160, "type": "all", "name": "生活"}
+    Food = {"api_type": "x", "rid": 1020, "type": "all", "name": "美食"}
+    Animal = {"api_type": "x", "rid": 1024, "type": "all", "name": "动物圈"}
+    Kichiku = {"api_type": "x", "rid": 1007, "type": "all", "name": "鬼畜"}
+    Fashion = {"api_type": "x", "rid": 1014, "type": "all", "name": "时尚美妆"}
+    Ent = {"api_type": "x", "rid": 1002, "type": "all", "name": "娱乐"}
+    Cinephile = {"api_type": "x", "rid": 1001, "type": "all", "name": "影视"}
+    Movie = {"api_type": "pgc", "season_type": 2, "name": "电影"}
+    TV = {"api_type": "pgc", "season_type": 5, "name": "电视剧"}
+    Variety = {"api_type": "pgc", "season_type": 7, "name": "综艺"}
+    Original = {"api_type": "x", "rid": 0, "type": "origin", "name": "原创"}
+    Rookie = {"api_type": "x", "rid": 0, "type": "rookie", "name": "新人"}
 
 def load_template(name):
     print(f'load_template-加载模板文件-{name}')
@@ -75,14 +103,21 @@ def mainpage():
     save_output_file('Custom.xaml',output)
     save_output_file('Custom.xaml.ini',BUILD_VERSION)
 
-def rankpage():
+def rankpage(type_: RankType_NameEx | None = None):
     print('rankpage-开始')
     print('rankpage-加载模板')
     load_template('rankpage')
     load_template('rankpage-next')
-    load_template('video-rank')
-    print('rankpage-获取api数据')
-    video_data: dict = sync(rank.get_rank()) # type: ignore
+    load_template('rankpage-video')
+    if type_ == None:
+        print('rankpage-总榜模式')
+        print('rankpage-获取api数据')
+        video_data: dict = sync(rank.get_rank()) # type: ignore
+    else:
+        print('rankpage-分榜模式')
+        print(f'rankpage-分榜type {type_}')
+        print('rankpage-获取api数据')
+        video_data: dict = sync(rank.get_rank(type_)) # type: ignore
     video_list = video_data['list']
     chunk_size = 20
     video_lists = [video_list[i:i + chunk_size] for i in range(0, len(video_list), chunk_size)]
@@ -92,25 +127,26 @@ def rankpage():
         print(f'rankpage-构建页面-{vlindex}/{len(video_lists)}')
         output = replaces(templates['rankpage'],{
             'num':vlindex,
+            'listname':'全站排行榜' if type_ == None else f'{type_.value['name']}排行榜',
             'total':len(video_lists),
             'video':'\n'.join([
-                replaces(templates['video-rank'],{
-                    'img': v['pic'],
+                replaces(templates['rankpage-video'],{
+                    'img': v['pic'] if 'pic' in v else v['ss_horizontal_cover'],
                     'view': uninumber(v['stat']['view']),
                     'danmaku': uninumber(v['stat']['danmaku']),
-                    'date': time.strftime('%m/%d', time.localtime(v['pubdate'])),
-                    'up': escape_xaml(v['owner']['name']),
+                    'date': time.strftime('%m/%d', time.localtime(v['pubdate'])) if 'pubdate' in v else '',
+                    'up': escape_xaml(v['owner']['name']) if 'owner' in v else '',
                     'title': escape_xaml(v['title']),
-                    'url': escape_xaml(v['short_link_v2']),
-                    'desc': escape_xaml(v['desc']),
-                    'like': uninumber(v['stat']['like']),
-                    'coin': uninumber(v['stat']['coin']),
-                    'favorite': uninumber(v['stat']['favorite']),
-                    'share': uninumber(v['stat']['share']),
-                    'color': '#ffbe35' if index == 1 else
-                    '#99bce0' if index == 2 else
-                    '#f5b7a3' if index == 2 else
-                    '#7b859a',
+                    'url': escape_xaml(v['short_link_v2'] if 'short_link_v2' in v else v['url']),
+                    'desc': escape_xaml(v['desc']) if 'dese' in v else '-',
+                    'like': uninumber(v['stat']['like'] if 'like' in v['stat'] else v['stat']['follow']),
+                    'coin': uninumber(v['stat']['coin']) if 'coin' in v['stat'] else '',
+                    'favorite': uninumber(v['stat']['favorite']) if 'favorite' in v['stat'] else '',
+                    'share': uninumber(v['stat']['share']) if 'share' in v['stat'] else '',
+                    'color': '#ffbe35' if index == 1 else(
+                    '#99bce0' if index == 2 else(
+                    '#f5b7a3' if index == 3 else
+                    '#7b859a')),
                     'rank': index,
                     '':print(f'rankpage-video-构建内容-{vlindex}/{len(video_lists)}-{index}/{len(video_data['list'])}')
                 }) for index, v in enumerate(vl,start=1+(vlindex-1)*20)
@@ -124,12 +160,43 @@ def rankpage():
     print('rankpage-保存输出文件')
     for index, o in enumerate(all_output, start=1):
         print(f'rankpage-保存输出文件-{index}/{len(video_lists)}')
-        save_output_file(f'rank_{index}.json',json.dumps(
-            {
-                "Title": f"Bilibili 全站排行榜 | 第 {index} / {len(video_lists)} 页"
-            }
-        ,ensure_ascii=False))
-        save_output_file(f'rank_{index}.xaml',o)
+        if type_ == None:
+            save_output_file(f'overall_rank_{index}.json',json.dumps(
+                {
+                    "Title": f"Bilibili 全站排行榜 | 第 {index} / {len(video_lists)} 页"
+                }
+            ,ensure_ascii=False))
+            save_output_file(f'overall_rank_{index}.xaml',o)
+        else:
+            save_output_file(f'{type_._name_}_rank_{index}.json',json.dumps(
+                {
+                    "Title": f"Bilibili {type_.value["name"]}排行榜 | 第 {index} / {len(video_lists)} 页"
+                }
+            ,ensure_ascii=False))
+            save_output_file(f'{type_._name_}_rank_{index}.xaml',o)
+
+def ranklistpage(ranks):
+    print('ranklistpage-开始')
+    print('ranklistpage-加载模板')
+    load_template('ranklistpage')
+    load_template('ranklistpage-item')
+    output = ''
+    for listtype in list(RankType_NameEx._member_map_.values()):
+        print(f'ranklistpage-添加排行榜-{listtype._name_}')
+        output += replaces(templates['ranklistpage-item'],{
+            'name':listtype.value['name'],
+            'mrank':listtype._name_
+        })
+    output = replaces(templates['ranklistpage'],{
+        'item':output,
+    })
+    print('ranklistpage-保存输出文件')
+    save_output_file(f'rank_list.json',json.dumps(
+        {
+            "Title": f"排行榜分榜"
+        }
+    ,ensure_ascii=False))
+    save_output_file(f'rank_list.xaml',output)
     
 def init():
     print('init-初始化中')
@@ -145,5 +212,10 @@ def init():
     mainpage()
     print('init-运行rank')
     rankpage()
+    for listtype in list(RankType_NameEx._member_map_.values()):
+        print(f'init-运行rank-{listtype._name_}分榜')
+        rankpage(listtype) # type: ignore
+    print('init-运行ranklist')
+    ranklistpage(list(RankType_NameEx._member_map_.values()))
 
 init()

@@ -188,7 +188,7 @@ def ranklistpage():
         output += replaces(templates['ranklistpage-item'],{
             'name':listtype.value['name'],
             'mrank':listtype._name_,
-            'num':index
+            'num':index-1
         })
     output = replaces(templates['ranklistpage'],{
         'item':output,

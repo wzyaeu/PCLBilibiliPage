@@ -181,13 +181,14 @@ def ranklistpage():
     load_template('ranklistpage')
     load_template('ranklistpage-item')
     output = ''
-    for listtype in list(RankType_NameEx._member_map_.values()):
+    for index, listtype in enumerate(list(RankType_NameEx._member_map_.values()), start=1):
         if listtype._name_ in ['All']:
             continue
         print(f'ranklistpage-添加排行榜-{listtype._name_}')
         output += replaces(templates['ranklistpage-item'],{
             'name':listtype.value['name'],
-            'mrank':listtype._name_
+            'mrank':listtype._name_,
+            'num':index
         })
     output = replaces(templates['ranklistpage'],{
         'item':output,

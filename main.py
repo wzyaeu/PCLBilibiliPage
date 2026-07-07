@@ -279,8 +279,8 @@ def init():
     print('init-运行ranklist')
     ranklistpage()
 
-    print('init-运行weekpage')
-    weekpage()
+    # print('init-运行weekpage')
+    # weekpage()
 
 
     print('init-运行sfile')

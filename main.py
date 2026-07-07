@@ -5,6 +5,8 @@ import shutil
 import json
 import time
 import secrets
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from enum import Enum
 
 class RankType_NameEx(Enum):
@@ -197,10 +199,54 @@ def ranklistpage():
     print('ranklistpage-保存输出文件')
     save_output_file(f'rank_list.json',json.dumps(
         {
-            "Title": f"排行榜分榜"
+            "Title": f"排行榜分类"
         }
     ,ensure_ascii=False))
     save_output_file(f'rank_list.xaml',output)
+
+def weekpage():
+    print('weekpage-开始')
+
+    now = datetime.now(ZoneInfo("Asia/Shanghai"))
+    
+    print('weekpage-加载模板')
+    load_template('weekpage')
+    load_template('video')
+
+    delta_days = (now - datetime(2019, 3, 22, tzinfo=ZoneInfo("Asia/Shanghai"))).days
+    week_number = delta_days // 7
+
+    print(f'weekpage-获取api数据-第{week_number}周')
+    video_data: dict = sync(hot.get_weekly_hot_videos(week=week_number)) # type: ignore
+
+    print('weekpage-构建页面')
+    output = replaces(templates['weekpage'],{
+        'num':week_number,
+        'video':'\n'.join([
+            replaces(templates['video'],{
+                'img': v['pic'],
+                'view': uninumber(v['stat']['view']),
+                'danmaku': uninumber(v['stat']['danmaku']),
+                'date': time.strftime('%m/%d', time.localtime(v['pubdate'])),
+                'up': escape_xaml(v['owner']['name']),
+                'title': escape_xaml(v['title']),
+                'url': escape_xaml(v['short_link_v2']),
+                'desc': escape_xaml(v['desc']),
+                'like': uninumber(v['stat']['like']),
+                'coin': uninumber(v['stat']['coin']),
+                'favorite': uninumber(v['stat']['favorite']),
+                'share': uninumber(v['stat']['share']),
+                '':print(f'weekpage-video-构建内容-{index}/{len(video_data['list'])}')
+            }) for index, v in enumerate(video_data['list'],start=1)
+        ])
+    })
+    print('weekpage-保存输出文件')
+    save_output_file(f'week.json',json.dumps(
+        {
+            "Title": f"Bilibili 每周必看 | 第 {week_number} 期"
+        }
+    ,ensure_ascii=False))
+    save_output_file(f'week.xaml',output)
 
 def sfile():
     print('sfile-保存build_info.md')
@@ -232,6 +278,10 @@ def init():
 
     print('init-运行ranklist')
     ranklistpage()
+
+    print('init-运行weekpage')
+    weekpage()
+
 
     print('init-运行sfile')
     sfile()

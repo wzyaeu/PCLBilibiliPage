@@ -84,6 +84,7 @@ def mainpage():
     output = replaces(templates['mainpage'],{
         'video':'\n'.join([
             replaces(templates['video'],{
+                'tag': '',
                 'img': v['pic'],
                 'view': uninumber(v['stat']['view']),
                 'danmaku': uninumber(v['stat']['danmaku']),
@@ -108,9 +109,10 @@ def mainpage():
 def rankpage(type_: RankType_NameEx | None = None):
     print('rankpage-开始')
     print('rankpage-加载模板')
+    load_template('video')
     load_template('rankpage')
     load_template('rankpage-next')
-    load_template('rankpage-video')
+    load_template('rankpage-videotag')
     if type_ == None:
         print('rankpage-总榜模式')
         print('rankpage-获取api数据')
@@ -132,7 +134,7 @@ def rankpage(type_: RankType_NameEx | None = None):
             'listname':'全站排行榜' if type_ == None else f'{type_.value['name']}排行榜',
             'total':len(video_lists),
             'video':'\n'.join([
-                replaces(templates['rankpage-video'],{
+                replaces(templates['video'],{
                     'img': v['pic'] if 'pic' in v else v['ss_horizontal_cover'],
                     'view': uninumber(v['stat']['view']),
                     'danmaku': uninumber(v['stat']['danmaku']),
@@ -145,11 +147,13 @@ def rankpage(type_: RankType_NameEx | None = None):
                     'coin': uninumber(v['stat']['coin']) if 'coin' in v['stat'] else '',
                     'favorite': uninumber(v['stat']['favorite']) if 'favorite' in v['stat'] else '',
                     'share': uninumber(v['stat']['share']) if 'share' in v['stat'] else '',
-                    'color': '#ffbe35' if index == 1 else(
-                    '#99bce0' if index == 2 else(
-                    '#f5b7a3' if index == 3 else
-                    '#7b859a')),
-                    'rank': index,
+                    'tag':replaces(templates['rankpage-videotag'],{
+                        'color': '#ffbe35' if index == 1 else(
+                        '#99bce0' if index == 2 else(
+                        '#f5b7a3' if index == 3 else
+                        '#7b859a')),
+                        'rank': index,
+                    }),
                     '':print(f'rankpage-video-构建内容-{vlindex}/{len(video_lists)}-{index}/{len(video_data['list'])}')
                 }) for index, v in enumerate(vl,start=1+(vlindex-1)*20)
             ]),

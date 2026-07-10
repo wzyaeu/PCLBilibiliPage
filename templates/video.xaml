@@ -1,8 +1,9 @@
 <local:MyCard Margin="5"
-              Width="272"
-              Height="200">
+              Width="190"
+              Height="150">
     <StackPanel Margin="3">
-        <Grid Margin="7,7,7,0" Height="140">
+        <Grid Margin="7,7,7,0"
+                Height="90">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
@@ -16,6 +17,7 @@
                     Height="22"
                     Background="Black"
                     Opacity="0.4"/>
+                    {tag}
             <StackPanel VerticalAlignment="Bottom"
                         Margin="4"
                         Orientation="Horizontal">
@@ -32,7 +34,7 @@
                     Foreground="{DynamicResource ColorBrush8}"
                     Text="{view}"/>
                 <Path Width="13"
-                      Margin="2,0,0,0"
+                      Margin="8,0,0,0"
                       Height="13"
                       VerticalAlignment="Center"
                       Stretch="Uniform"
@@ -44,11 +46,11 @@
                     Foreground="{DynamicResource ColorBrush8}"
                     Text="{danmaku}"/>
                 <TextBlock
-                    Margin="2,0,0,0"
+                    Margin="8,0,0,0"
                     FontSize="13"
                     Foreground="{DynamicResource ColorBrush8}"
-                    Text="{date} {up}"
-                    ToolTip="{date} {up}"/>
+                    Text="{date}"
+                    ToolTip="{date}"/>
             </StackPanel>
         </Grid>
         <TextBlock Margin="7,4,7,0"
@@ -74,6 +76,11 @@
                 Text="信息"
                 EventType="弹出窗口"
                 EventData="详细信息|标题：{title}\n简介：{desc}\n\n播放：{view}\n弹幕：{danmaku}\n点赞：{like}\n投币：{coin}\n收藏：{favorite}\n分享：{share}"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="{up}"
+                ToolTip="{up}"/>
         </StackPanel>
     </StackPanel>
 </local:MyCard>

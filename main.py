@@ -9,9 +9,6 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from enum import Enum
 
-class RankType_NameEx2(Enum):
-    Variety = {"api_type": "pgc", "season_type": 7, "name": "综艺"}
-
 class RankType_NameEx(Enum):
     All = {"api_type": "x", "rid": 0, "type": "all", "name": "全部"}
     Bangumi = {"api_type": "pgc", "season_type": 1, "name": "番剧"}
@@ -275,7 +272,7 @@ def init():
     mainpage()
     
     print('init-运行rank')
-    rank_l = list(RankType_NameEx2._member_map_.values())
+    rank_l = list(RankType_NameEx._member_map_.values())
     rankpage()
     for listtype in rank_l:
         if listtype._name_ in ['All']:

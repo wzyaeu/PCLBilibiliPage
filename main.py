@@ -9,6 +9,9 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from enum import Enum
 
+class RankType_NameEx2(Enum):
+    Variety = {"api_type": "pgc", "season_type": 7, "name": "综艺"}
+
 class RankType_NameEx(Enum):
     All = {"api_type": "x", "rid": 0, "type": "all", "name": "全部"}
     Bangumi = {"api_type": "pgc", "season_type": 1, "name": "番剧"}
@@ -124,9 +127,9 @@ def rankpage(type_: RankType_NameEx | None = None):
         video_data: dict = sync(rank.get_rank(type_)) # type: ignore
     video_list = video_data['list']
     chunk_size = 20
-    video_lists = [video_list[i:i + chunk_size] for i in range(0, len(video_list), chunk_size)]
+    video_lists = [video_list[i:i + chunk_size] for i in range(0, len(video_list), chunk_size)] if len(video_list) > 0 else [[]]
     all_output = []
-    print('rankpage-构建页面')
+    print(f'rankpage-构建页面')
     for vlindex, vl in enumerate(video_lists, start=1):
         print(f'rankpage-构建页面-{vlindex}/{len(video_lists)}')
         output = replaces(templates['rankpage'],{
@@ -154,7 +157,6 @@ def rankpage(type_: RankType_NameEx | None = None):
                         '#7b859a')),
                         'rank': index,
                     }),
-                    '':print(f'rankpage-video-构建内容-{vlindex}/{len(video_lists)}-{index}/{len(video_data['list'])}')
                 }) for index, v in enumerate(vl,start=1+(vlindex-1)*20)
             ]),
             'next': '' if vlindex == len(video_lists) else replaces(templates['rankpage-next'],{
@@ -182,13 +184,13 @@ def rankpage(type_: RankType_NameEx | None = None):
             ,ensure_ascii=False))
             save_output_file(f'{type_._name_}_rank_{index}.xaml',o)
 
-def ranklistpage():
+def ranklistpage(rank_l):
     print('ranklistpage-开始')
     print('ranklistpage-加载模板')
     load_template('ranklistpage')
     load_template('ranklistpage-item')
     output = ''
-    for index, listtype in enumerate(list(RankType_NameEx._member_map_.values()), start=1):
+    for index, listtype in enumerate(rank_l, start=1):
         if listtype._name_ in ['All']:
             continue
         print(f'ranklistpage-添加排行榜-{listtype._name_}')
@@ -273,15 +275,16 @@ def init():
     mainpage()
     
     print('init-运行rank')
+    rank_l = list(RankType_NameEx2._member_map_.values())
     rankpage()
-    for listtype in list(RankType_NameEx._member_map_.values()):
+    for listtype in rank_l:
         if listtype._name_ in ['All']:
             continue
         print(f'init-运行rank-{listtype._name_}分榜')
         rankpage(listtype) # type: ignore
 
     print('init-运行ranklist')
-    ranklistpage()
+    ranklistpage(rank_l)
 
     # print('init-运行weekpage')
     # weekpage()

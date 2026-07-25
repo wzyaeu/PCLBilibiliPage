@@ -67,15 +67,15 @@ def uninumber(n: int):
 def nlv(s):
     return '\\n'.join(str(s).splitlines())
 
-def escape_xaml(text, custom: dict = {}):
-    return replaces(text,{
-        '&':'&amp;',
-        '<':'&lt;',
-        '>':'&gt;',
-        '"':'&quot;',
-        '\'':'&apos;',
-        **custom
-    },lambda x: x)
+def escape_xaml(text):
+    return (
+        text.replace("&", "&amp;")
+             .replace("<", "&lt;")
+             .replace(">", "&gt;")
+             .replace('"', "&quot;")
+             .replace("'", "&apos;")
+             .replace("|", "&#124;")
+    )
 
 def mainpage():
     print('mainpage-开始')
@@ -96,7 +96,7 @@ def mainpage():
                 'up': escape_xaml(v['owner']['name']),
                 'title': escape_xaml(v['title']),
                 'url': escape_xaml(v['short_link_v2']),
-                'desc': escape_xaml(nlv(v['desc']),{'|':'&#124;'}),
+                'desc': escape_xaml(nlv(v['desc'])),
                 'like': uninumber(v['stat']['like']),
                 'coin': uninumber(v['stat']['coin']),
                 'favorite': uninumber(v['stat']['favorite']),
@@ -146,7 +146,7 @@ def rankpage(type_: RankType_NameEx | None = None):
                     'up': escape_xaml(v['owner']['name']) if 'owner' in v else '',
                     'title': escape_xaml(v['title']),
                     'url': escape_xaml(v['short_link_v2'] if 'short_link_v2' in v else v['url']),
-                    'desc': escape_xaml(nlv(v['desc']),{'|':'&#124;'}) if 'desc' in v else '-',
+                    'desc': escape_xaml(nlv(v['desc'])) if 'desc' in v else '-',
                     'like': uninumber(v['stat']['like'] if 'like' in v['stat'] else v['stat']['follow']),
                     'coin': uninumber(v['stat']['coin']) if 'coin' in v['stat'] else '',
                     'favorite': uninumber(v['stat']['favorite']) if 'favorite' in v['stat'] else '',
@@ -238,7 +238,7 @@ def weekpage():
                 'up': escape_xaml(v['owner']['name']),
                 'title': escape_xaml(v['title']),
                 'url': escape_xaml(v['short_link_v2']),
-                'desc': escape_xaml(v['desc'],{'|':'&#124;'}),
+                'desc': escape_xaml(v['desc']),
                 'like': uninumber(v['stat']['like']),
                 'coin': uninumber(v['stat']['coin']),
                 'favorite': uninumber(v['stat']['favorite']),

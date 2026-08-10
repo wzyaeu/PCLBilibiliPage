@@ -4,6 +4,10 @@ PCL Bilibili Page主页仓库。
 
 ## 使用
 
+### 使用预设
+
+现已上架PCL预设，前往`设置->个性化->主页`，选择预设`Bilibili 热门`。
+
 ### 使用链接
 
 前往`设置->个性化->主页`，输入联网下载地址`bilibili.p.kaphia.qzz.io`。

@@ -10,7 +10,7 @@ PCL Bilibili Page主页仓库。
 
 ### 使用链接
 
-前往`设置->个性化->主页`，输入联网下载地址`bilibili.p.kaphia.qzz.io`。
+前往`设置->个性化->主页`，输入联网下载地址`bilibili.p.kaphia.top`。
 
 ## 协议
 

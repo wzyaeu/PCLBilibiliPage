@@ -255,6 +255,11 @@ def weekpage():
     ,ensure_ascii=False))
     save_output_file(f'week.xaml',output)
 
+def redirects():
+    with open(os.path.join(OUTPUT_PATH, '_redirects'), 'w', encoding='utf-8') as f:
+        f.write('''/ /Custom.xaml 200
+/version /Custom.xaml.ini 200''')
+
 def init():
     print('init-初始化中')
     global OUTPUT_PATH, BASE_PATH, BUILD_VERSION, templates
@@ -282,5 +287,8 @@ def init():
 
     # print('init-运行weekpage')
     # weekpage()
+
+    print('init-运行redirects')
+    redirects()
 
 init()

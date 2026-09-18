@@ -109,6 +109,11 @@ def mainpage():
     print('mainpage-保存输出文件')
     save_output_file('Custom.xaml',output)
     save_output_file('Custom.xaml.ini',BUILD_VERSION)
+    save_output_file('Custom.json',json.dumps(
+        {
+            "Title": "Bilibili 热门"
+        }
+    ,ensure_ascii=False))
 
 def rankpage(type_: RankType_NameEx | None = None):
     print('rankpage-开始')

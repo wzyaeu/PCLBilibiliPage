@@ -1,0 +1,2183 @@
+<StackPanel>
+    <StackPanel.Resources>
+        <Style TargetType="Path"
+               x:Key="view_svgdata">
+            <Setter Property="Data"
+                    Value="M12 4.99805C9.48178 4.99805 7.283 5.12616 5.73089 5.25202C4.65221 5.33949 3.81611 6.16352 3.72 7.23254C3.60607 8.4998 3.5 10.171 3.5 11.998C3.5 13.8251 3.60607 15.4963 3.72 16.76355C3.81611 17.83255 4.65221 18.6566 5.73089 18.7441C7.283 18.8699 9.48178 18.998 12 18.998C14.5185 18.998 16.7174 18.8699 18.2696 18.74405C19.3481 18.65655 20.184 17.8328 20.2801 16.76405C20.394 15.4973 20.5 13.82645 20.5 11.998C20.5 10.16965 20.394 8.49877 20.2801 7.23205C20.184 6.1633 19.3481 5.33952 18.2696 5.25205C16.7174 5.12618 14.5185 4.99805 12 4.99805zM5.60965 3.75693C7.19232 3.62859 9.43258 3.49805 12 3.49805C14.5677 3.49805 16.8081 3.62861 18.3908 3.75696C20.1881 3.90272 21.6118 5.29278 21.7741 7.09773C21.8909 8.3969 22 10.11405 22 11.998C22 13.88205 21.8909 15.5992 21.7741 16.8984C21.6118 18.7033 20.1881 20.09335 18.3908 20.23915C16.8081 20.3675 14.5677 20.498 12 20.498C9.43258 20.498 7.19232 20.3675 5.60965 20.2392C3.81206 20.0934 2.38831 18.70295 2.22603 16.8979C2.10918 15.5982 2 13.8808 2 11.998C2 10.1153 2.10918 8.39787 2.22603 7.09823C2.38831 5.29312 3.81206 3.90269 5.60965 3.75693z M14.7138 10.96875C15.50765 11.4271 15.50765 12.573 14.71375 13.0313L11.5362 14.8659C10.74235 15.3242 9.75 14.7513 9.75001 13.8346L9.75001 10.1655C9.75001 9.24881 10.74235 8.67587 11.5362 9.13422L14.7138 10.96875z"/>
+        </Style>
+        <Style TargetType="Path"
+               x:Key="danmaku_svgdata">
+            <Setter Property="Data"
+                    Value="M12 4.99805C9.48178 4.99805 7.283 5.12616 5.73089 5.25202C4.65221 5.33949 3.81611 6.16352 3.72 7.23254C3.60607 8.4998 3.5 10.171 3.5 11.998C3.5 13.8251 3.60607 15.4963 3.72 16.76355C3.81611 17.83255 4.65221 18.6566 5.73089 18.7441C7.283 18.8699 9.48178 18.998 12 18.998C14.5185 18.998 16.7174 18.8699 18.2696 18.74405C19.3481 18.65655 20.184 17.8328 20.2801 16.76405C20.394 15.4973 20.5 13.82645 20.5 11.998C20.5 10.16965 20.394 8.49877 20.2801 7.23205C20.184 6.1633 19.3481 5.33952 18.2696 5.25205C16.7174 5.12618 14.5185 4.99805 12 4.99805zM5.60965 3.75693C7.19232 3.62859 9.43258 3.49805 12 3.49805C14.5677 3.49805 16.8081 3.62861 18.3908 3.75696C20.1881 3.90272 21.6118 5.29278 21.7741 7.09773C21.8909 8.3969 22 10.11405 22 11.998C22 13.88205 21.8909 15.5992 21.7741 16.8984C21.6118 18.7033 20.1881 20.09335 18.3908 20.23915C16.8081 20.3675 14.5677 20.498 12 20.498C9.43258 20.498 7.19232 20.3675 5.60965 20.2392C3.81206 20.0934 2.38831 18.70295 2.22603 16.8979C2.10918 15.5982 2 13.8808 2 11.998C2 10.1153 2.10918 8.39787 2.22603 7.09823C2.38831 5.29312 3.81206 3.90269 5.60965 3.75693z M15.875 10.75L9.875 10.75C9.46079 10.75 9.125 10.4142 9.125 10C9.125 9.58579 9.46079 9.25 9.875 9.25L15.875 9.25C16.2892 9.25 16.625 9.58579 16.625 10C16.625 10.4142 16.2892 10.75 15.875 10.75z M17.375 14.75L11.375 14.75C10.9608 14.75 10.625 14.4142 10.625 14C10.625 13.5858 10.9608 13.25 11.375 13.25L17.375 13.25C17.7892 13.25 18.125 13.5858 18.125 14C18.125 14.4142 17.7892 14.75 17.375 14.75z M7.875 10C7.875 10.4142 7.53921 10.75 7.125 10.75L6.625 10.75C6.21079 10.75 5.875 10.4142 5.875 10C5.875 9.58579 6.21079 9.25 6.625 9.25L7.125 9.25C7.53921 9.25 7.875 9.58579 7.875 10z M9.375 14C9.375 14.4142 9.03921 14.75 8.625 14.75L8.125 14.75C7.71079 14.75 7.375 14.4142 7.375 14C7.375 13.5858 7.71079 13.25 8.125 13.25L8.625 13.25C9.03921 13.25 9.375 13.5858 9.375 14z"/>
+        </Style>
+    </StackPanel.Resources>
+    <local:MyCard Margin="0,0,0,3">
+        <StackPanel Margin="5"
+                    Orientation="Horizontal">
+            <Border Background="{DynamicResource ColorBrush4}"
+                    CornerRadius="5">
+                <TextBlock Margin="5,0,5,0"
+                           VerticalAlignment="Center"
+                           FontSize="18"
+                           Foreground="{DynamicResource ColorBrush7}"
+                           Text="Bilibili热门"/>
+            </Border>
+            <TextBlock Margin="10,3,3,3"
+                       FontWeight="Bold"
+                       FontSize="16"
+                       VerticalAlignment="Center"
+                       Foreground="{DynamicResource ColorBrush3}"
+                       Text="排行榜"/>
+            <local:MyIconTextButton Margin="2"
+                                    Height="35"
+                                    VerticalAlignment="Center"
+                                    Text="刷新"
+                                    EventType="刷新页面"
+                                    LogoScale="1"
+                                    Logo="M841.140212 512.013257c0 181.498884-147.641328 329.140212-329.140212 329.140212s-329.140212-147.641328-329.140212-329.140212c0-175.391505 137.999348-318.746696 311.068586-328.211305l0 99.641714c0 3.249345 1.749929 6.286578 4.571392 7.928622 1.428103 0.821022 3.000662 1.214162 4.571392 1.214162s3.143289-0.39314 4.571392-1.214162l237.569748-137.141755c2.821463-1.642044 4.571392-4.679277 4.571392-7.928622s-1.749929-6.286578-4.571392-7.928622l-237.569748-137.141755c-2.856206-1.642044-6.286578-1.642044-9.142784 0-2.821463 1.642044-4.571392 4.679277-4.571392 7.928622l0 101.499527C280.537631 120.195606 109.717518 296.300248 109.717518 512.013257c0 221.820389 180.462093 402.282482 402.282482 402.282482s402.282482-180.462093 402.282482-402.282482L841.140212 512.013257z"/>
+            
+        </StackPanel>
+    </local:MyCard>
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock FontSize="17"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource ColorBrush3}"
+                   Text="知识排行榜 第 5 / 5 页"/>
+        <Line X1="0"
+              Grid.Column="1"
+              Y1="0"
+              X2="1000"
+              Y2="0"
+              StrokeThickness="2"
+              VerticalAlignment="Center"
+              Stroke="{DynamicResource ColorBrush3}"
+              Margin="10,0"/>
+    </Grid>
+    <WrapPanel VerticalAlignment="Center"
+               Margin="0,2">
+        <local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i2.hdslb.com/bfs/archive/e3ef4c5fa05f9b5c57b90811a1d850550db852f7.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="81"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="17.4万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="248"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/08"
+                    ToolTip="10/08"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="再哭就滚出去！德国人忍不了一点，在线怼！"
+                   ToolTip="再哭就滚出去！德国人忍不了一点，在线怼！"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1TXHk6WEWK"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="再哭就滚出去！德国人忍不了一点，在线怼！|对有同样经历的朋友感到抱歉！There is a crack in everything ,That&apos;s how the light gets in!\n\n互动数据：\n播放：17.4万\n弹幕：248\n点赞：1.1万\n投币：679\n收藏：3182\n分享：420"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="德国人Leo乐柏说"
+                ToolTip="德国人Leo乐柏说"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i1.hdslb.com/bfs/archive/a845dbd15a2c7b18445402f2b59f6cdc21504d92.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="82"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="9.4万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="556"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/10"
+                    ToolTip="10/10"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="侵华是为了中国好？这部漫画揭穿日本虚伪宣传"
+                   ToolTip="侵华是为了中国好？这部漫画揭穿日本虚伪宣传"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV16opg6WELN"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="侵华是为了中国好？这部漫画揭穿日本虚伪宣传|参考文献：\n[1] 埃尔热. 丁丁历险记·蓝莲花[M]. 王炳东， 译. 北京： 中国少年儿童出版社， 2009.\n[2] Hergé. Le Lotus bleu[M]. Tournai: Casterman, 1936.\n[3]周宁.“义和团”与“傅满洲博士”:二十世纪初西方的“黄祸”恐慌[J].书屋,2003.\n[4]张晓宇.义和团运动时期英文报纸中的“大屠杀”谣言[J].历史研究,2024.\n[5] Thompson H. Tintin: Hergé and His Creation[M]. Lo\n\n互动数据：\n播放：9.4万\n弹幕：556\n点赞：1.4万\n投币：1643\n收藏：5948\n分享：205"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="一万也"
+                ToolTip="一万也"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i0.hdslb.com/bfs/archive/fab6e0652d7bcd2123d4fd08ee4ad56806dc533a.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="83"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="40.7万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="60"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/08"
+                    ToolTip="10/08"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="牛奶出现黑色物质？还能喝吗？"
+                   ToolTip="牛奶出现黑色物质？还能喝吗？"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1HzHD6NE78"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="牛奶出现黑色物质？还能喝吗？|-\n\n互动数据：\n播放：40.7万\n弹幕：60\n点赞：8539\n投币：116\n收藏：222\n分享：33"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="化学那些事er"
+                ToolTip="化学那些事er"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i2.hdslb.com/bfs/archive/9c2c4f62e387d5770c2de0526f8580a43d69fd22.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="84"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="98.8万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="3083"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/06"
+                    ToolTip="10/06"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="【罗翔】鸽子们，注意了，色字头上一把刀！"
+                   ToolTip="【罗翔】鸽子们，注意了，色字头上一把刀！"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1yKHf6fEAT"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="【罗翔】鸽子们，注意了，色字头上一把刀！|无论对人还是对小动物而言，色字头上都是一把刀。张三色诱鸽子炖汤这犯罪吗？\n\n互动数据：\n播放：98.8万\n弹幕：3083\n点赞：6.5万\n投币：7064\n收藏：9974\n分享：3016"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="罗翔说刑法"
+                ToolTip="罗翔说刑法"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i1.hdslb.com/bfs/archive/306674f64c8c719c1bcca8a72e1d46b2ad21e394.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="85"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="19.2万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="184"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/08"
+                    ToolTip="10/08"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="解读2026年诺贝尔文学奖得主安妮·卡森，一位与古典传统戏谑对话的传奇诗人"
+                   ToolTip="解读2026年诺贝尔文学奖得主安妮·卡森，一位与古典传统戏谑对话的传奇诗人"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1YrH968E3w"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="解读2026年诺贝尔文学奖得主安妮·卡森，一位与古典传统戏谑对话的传奇诗人|\n\n互动数据：\n播放：19.2万\n弹幕：184\n点赞：6199\n投币：1682\n收藏：2975\n分享：680"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="大澜的文学午安"
+                ToolTip="大澜的文学午安"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i1.hdslb.com/bfs/archive/0f8b9749e4f6eddef93be6bc93e5ed59fdc41b56.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="86"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="18.9万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="673"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/09"
+                    ToolTip="10/09"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="7人进洞淘金，突发洪水封死唯一出口，国际救援队展开生死营救 ｜ 老挝洞穴淘金受困事件"
+                   ToolTip="7人进洞淘金，突发洪水封死唯一出口，国际救援队展开生死营救 ｜ 老挝洞穴淘金受困事件"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1ivH96eEgC"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="7人进洞淘金，突发洪水封死唯一出口，国际救援队展开生死营救 ｜ 老挝洞穴淘金受困事件|2026年5月，老挝中部赛宋奔省的深山里，七名村民钻进一座废弃金矿洞淘金，一场突降的季风暴雨把整座山腹变成了与世隔绝的水牢。多国洞穴潜水员挤过仅60cm宽的泥浆通道，找到了5名幸存者，却始终没有另外2人的下落...\n\n互动数据：\n播放：18.9万\n弹幕：673\n点赞：9598\n投币：2280\n收藏：2391\n分享：191"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="X调查"
+                ToolTip="X调查"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i1.hdslb.com/bfs/archive/56c09224aec295a0f06b6b982dc6f0502af792a0.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="87"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="11.8万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="1155"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/10"
+                    ToolTip="10/10"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="我毙蓝航陷"
+                   ToolTip="我毙蓝航陷"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1ntHy6EEQt"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="我毙蓝航陷|你是在船上打工的穷苦打工人，但这艘船叫泰坦尼克号啊！\n\n互动数据：\n播放：11.8万\n弹幕：1155\n点赞：1.4万\n投币：1367\n收藏：3945\n分享：541"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="壹根甘蔗"
+                ToolTip="壹根甘蔗"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i1.hdslb.com/bfs/archive/b4e86b834647446fb0c847dd4654a9df9f6c610d.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="88"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="20.5万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="35"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/08"
+                    ToolTip="10/08"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="【巫师】保健品割韭菜，谁来治？"
+                   ToolTip="【巫师】保健品割韭菜，谁来治？"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1DZHU6VENm"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="【巫师】保健品割韭菜，谁来治？|\n\n互动数据：\n播放：20.5万\n弹幕：35\n点赞：8162\n投币：1354\n收藏：1477\n分享：320"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="巫师财经"
+                ToolTip="巫师财经"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i1.hdslb.com/bfs/archive/2c076553ef1b0af241688427508048c22dfb1b0b.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="89"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="24.6万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="806"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/08"
+                    ToolTip="10/08"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="流动小厨，小鹏往事，网友还是骂轻了"
+                   ToolTip="流动小厨，小鹏往事，网友还是骂轻了"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV15WpM6uEvS"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="流动小厨，小鹏往事，网友还是骂轻了|\n\n互动数据：\n播放：24.6万\n弹幕：806\n点赞：7940\n投币：841\n收藏：1533\n分享：583"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="艺术家栋栋"
+                ToolTip="艺术家栋栋"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i2.hdslb.com/bfs/archive/6dbaa34c93dfaf84c6c69ef5032ee1c714a861ef.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="90"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="145.3万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="3486"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/02"
+                    ToolTip="10/02"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="古罗马重口生活实录——两千年前庞贝古城的真实日常，刷新你对古罗马的认知，很多习俗放到今天完全无法想象。"
+                   ToolTip="古罗马重口生活实录——两千年前庞贝古城的真实日常，刷新你对古罗马的认知，很多习俗放到今天完全无法想象。"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV185ac6eEFP"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="古罗马重口生活实录——两千年前庞贝古城的真实日常，刷新你对古罗马的认知，很多习俗放到今天完全无法想象。|\n\n互动数据：\n播放：145.3万\n弹幕：3486\n点赞：18.1万\n投币：6820\n收藏：4.2万\n分享：2.7万"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="庞贝老丁"
+                ToolTip="庞贝老丁"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i0.hdslb.com/bfs/archive/49fb38a0a66ac447a43c9521329c9000c2befdc4.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="91"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="11.5万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="207"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/07"
+                    ToolTip="10/07"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="四六级从10月8号后开始备考，60天时间怎么彻底搞定四六级？基础很差应该怎么搞定四六级？"
+                   ToolTip="四六级从10月8号后开始备考，60天时间怎么彻底搞定四六级？基础很差应该怎么搞定四六级？"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1DtpM6vEYh"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="四六级从10月8号后开始备考，60天时间怎么彻底搞定四六级？基础很差应该怎么搞定四六级？|备考规划总结：\n【1】10月8号-11月8号\n①真题阅读中背单词：精选近12套真题（48篇阅读），每日完成1篇，标注生词/拆解长句，在句子语境中背单词（注：四级常年循环4500核心词汇，无需额外背单词书，真题重复率极高）；\n②听力：同步在阅读中夯实生词，通过逐句模仿突破语速瓶颈，熟练后可达70%听力正确率。\n【2】11月10号后\n搞定翻译、写作，如果基础非常不好，还要集中攻克语法长难句。\n最后，祝愿同学们12月的考试一次高分过！！！\n\n互动数据：\n播放：11.5万\n弹幕：207\n点赞：1.3万\n投币：1521\n收藏：8410\n分享：1096"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="英语老师晓艳"
+                ToolTip="英语老师晓艳"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i1.hdslb.com/bfs/archive/48b65e142bdaff2d988a85eb564668adff684264.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="92"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="216.8万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="338"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/10"
+                    ToolTip="10/10"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="1段“小女孩在生日聚会上跳舞”视频，暴露出多少令人尴尬的神人"
+                   ToolTip="1段“小女孩在生日聚会上跳舞”视频，暴露出多少令人尴尬的神人"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1AXpY6xEgy"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="1段“小女孩在生日聚会上跳舞”视频，暴露出多少令人尴尬的神人|如果小伙伴有更多的看法，可以在评论区给我留言哦。\n下期想看什么热点事件，也可以跟椰子说说呀。\n感谢大家的一键三连，你们的鼓励是我做视频的动力～\n\n互动数据：\n播放：216.8万\n弹幕：338\n点赞：1.1万\n投币：317\n收藏：5679\n分享：132"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="小椰子专栏"
+                ToolTip="小椰子专栏"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i0.hdslb.com/bfs/archive/c5a33094df6f08c744a2d1ed59daefdb5eabcbf8.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="93"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="41.2万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="25"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/08"
+                    ToolTip="10/08"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="面对坏人追赶，为什么开门时反应会变慢？"
+                   ToolTip="面对坏人追赶，为什么开门时反应会变慢？"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1mma665ESS"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="面对坏人追赶，为什么开门时反应会变慢？|\n\n互动数据：\n播放：41.2万\n弹幕：25\n点赞：4517\n投币：93\n收藏：238\n分享：30"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="机械庞克"
+                ToolTip="机械庞克"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i2.hdslb.com/bfs/archive/dbb65ac8b240cf28bdcb7bbcda651d0c4dc5cdf5.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="94"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="17.7万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="530"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/08"
+                    ToolTip="10/08"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="【参考信息第657期】不敢教到不愿学；未报批不能上台"
+                   ToolTip="【参考信息第657期】不敢教到不愿学；未报批不能上台"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1vSHD6tEsM"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="【参考信息第657期】不敢教到不愿学；未报批不能上台|继续分享马督工睡前消息编辑部关注的新闻\n\n互动数据：\n播放：17.7万\n弹幕：530\n点赞：8053\n投币：2018\n收藏：1471\n分享：281"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="小黛晨读"
+                ToolTip="小黛晨读"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i2.hdslb.com/bfs/archive/94fd859b5622ea3af8f12d401242e4ff243e1eeb.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="95"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="18.7万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="548"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/10"
+                    ToolTip="10/10"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="【3d地形图系列】就你叫天下第一雄关啊！"
+                   ToolTip="【3d地形图系列】就你叫天下第一雄关啊！"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1Aopv6hEwH"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="【3d地形图系列】就你叫天下第一雄关啊！|\n\n互动数据：\n播放：18.7万\n弹幕：548\n点赞：7943\n投币：604\n收藏：1652\n分享：118"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="有点意思研究所"
+                ToolTip="有点意思研究所"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i2.hdslb.com/bfs/archive/21aa41c0bc547eb7b19d6294ab01987eb1f257f5.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="96"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="366.4万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="906"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/02"
+                    ToolTip="10/02"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="你长大了，该了解闲鱼了"
+                   ToolTip="你长大了，该了解闲鱼了"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1cNYP6wEiB"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="你长大了，该了解闲鱼了|\n\n互动数据：\n播放：366.4万\n弹幕：906\n点赞：10.7万\n投币：9031\n收藏：8.3万\n分享：1.5万"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="阿强动画丶"
+                ToolTip="阿强动画丶"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i0.hdslb.com/bfs/archive/359402fd1fc88b34c03c71d686d3aff8c7d99dc1.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="97"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="20.3万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="711"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/09"
+                    ToolTip="10/09"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="俄罗斯有鼠疫？求求别搞了！"
+                   ToolTip="俄罗斯有鼠疫？求求别搞了！"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1GJp469EeC"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="俄罗斯有鼠疫？求求别搞了！|记得一键三联！！！\n\n互动数据：\n播放：20.3万\n弹幕：711\n点赞：8893\n投币：842\n收藏：1375\n分享：345"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="树根龙门阵"
+                ToolTip="树根龙门阵"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i0.hdslb.com/bfs/archive/5fcc979453acecda605ec547d443b0d719eb8e58.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="98"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="36.4万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="14"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/08"
+                    ToolTip="10/08"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="为什么电影院 总在商场最高层"
+                   ToolTip="为什么电影院 总在商场最高层"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1kJah6kEZX"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="为什么电影院 总在商场最高层|为什么电影院 总在商场最高层\n\n互动数据：\n播放：36.4万\n弹幕：14\n点赞：1.0万\n投币：58\n收藏：317\n分享：46"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="马生序00"
+                ToolTip="马生序00"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i0.hdslb.com/bfs/archive/e623ffd79089b48ea38df81d1f4e56e1a2d7904f.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="99"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="2203.2万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="4.3万"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/02"
+                    ToolTip="10/02"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="4名枪匪闯入豪宅，中国男子4秒13枪疯狂反击！"
+                   ToolTip="4名枪匪闯入豪宅，中国男子4秒13枪疯狂反击！"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV18Bam6eEBd"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="4名枪匪闯入豪宅，中国男子4秒13枪疯狂反击！|观众老爷好~今天我们将报道~非洲津巴布韦的《正当防卫案》~请注意~我们制作这类影片是为了教育、警示、科普法律知识~请勿效仿和学习影片中的任何违法犯罪行为~\n\n本视频影像来源于依法公开的执法记录资料，属公共记录范畴\n内容基于公开资料进行案件事实还原与法律程序分析\n本视频不针对当事人作出评价、指责或任何形式指控\n如当事人认为存在事实偏差，欢迎联系说明，我们将核实修正\n\n互动数据：\n播放：2203.2万\n弹幕：4.3万\n点赞：55.1万\n投币：2.1万\n收藏：16.0万\n分享：2.3万"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="红蓝守护者"
+                ToolTip="红蓝守护者"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="5"
+              Width="190"
+              Height="150">
+    <StackPanel Margin="3">
+        <Grid Margin="7,7,7,0"
+                Height="90">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <local:MyImage
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Source="http://i1.hdslb.com/bfs/archive/b7a193b61a0ac5a6aa42eff7fb9b3f971b0eb2d2.jpg"/>
+            </StackPanel>
+            <Border VerticalAlignment="Bottom"
+                    Height="22"
+                    Background="Black"
+                    Opacity="0.4"/>
+                    <Border VerticalAlignment="Top"
+        HorizontalAlignment="Left"
+        Height="23"
+        Width="58"
+        Margin="3"
+        Background="#7b859a"
+        CornerRadius="7">
+    <StackPanel HorizontalAlignment="Center"
+                Margin="3"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+        <TextBlock FontSize="10"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="No."/>
+        <TextBlock FontSize="15"
+                   Foreground="{DynamicResource ColorBrush8}"
+                   VerticalAlignment="Bottom"
+                   Text="100"/>
+    </StackPanel>
+</Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="4"
+                        Orientation="Horizontal">
+                <Path Width="13"
+                      Margin="2,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource view_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="26.4万"/>
+                <Path Width="13"
+                      Margin="8,0,0,0"
+                      Height="13"
+                      VerticalAlignment="Center"
+                      Stretch="Uniform"
+                      Fill="{DynamicResource ColorBrush8}"
+                      Style="{StaticResource danmaku_svgdata}"/>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="1591"/>
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontSize="13"
+                    Foreground="{DynamicResource ColorBrush8}"
+                    Text="10/07"
+                    ToolTip="10/07"/>
+            </StackPanel>
+        </Grid>
+        <TextBlock Margin="7,4,7,0"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Height="17"
+                   Foreground="{DynamicResource ColorBrush1}"
+                   Text="第94期 在古代，四大军功哪个难度最大❓有没有人集齐❓"
+                   ToolTip="第94期 在古代，四大军功哪个难度最大❓有没有人集齐❓"/>
+        <StackPanel Margin="7,3,7,0"
+                    Orientation="Horizontal">
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="查看"
+                EventType="打开网页"
+                EventData="https://b23.tv/BV1X6Hk6hE2Q"/>
+            <local:MyButton
+                Margin="1,0,1,0"
+                Height="18"
+                Width="50"
+                Text="信息"
+                EventType="弹出窗口"
+                EventData="第94期 在古代，四大军功哪个难度最大❓有没有人集齐❓|\n\n互动数据：\n播放：26.4万\n弹幕：1591\n点赞：5090\n投币：824\n收藏：2336\n分享：109"/>
+            <TextBlock
+                Margin="2,1,0,0"
+                FontSize="13"
+                Text="每天一点历史学"
+                ToolTip="每天一点历史学"/>
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+    </WrapPanel>
+</StackPanel>
